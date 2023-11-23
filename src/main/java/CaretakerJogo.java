@@ -7,6 +7,9 @@ public class CaretakerJogo {
     private List<MementoJogo> historico = new ArrayList<>();
 
     public void addMemento(MementoJogo memento){
+        if (memento == null){
+            throw new IllegalArgumentException("Objeto MementoJogo é nulo!");
+        }
         historico.add(memento);
     }
 
